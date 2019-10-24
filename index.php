@@ -33,7 +33,7 @@ if ($xlsx = SimpleXLSX::parse(__DIR__ . '/data/ogostos.xlsx')) {
     $data = lastTransformation($data, $emptyDayList);
     $html = render($data);
 
-    file_put_contents(__DIR__ . '/report.html', $html);
+    file_put_contents(__DIR__ . '/report/report.html', $html);
 
     echo sprintf('done by %s second', microtime(true) - $startTime) . PHP_EOL;
 } else {
